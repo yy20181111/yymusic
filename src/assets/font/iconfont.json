@@ -1,0 +1,44 @@
+{
+  "id": "2344857",
+  "name": "水清系统",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17134077",
+      "name": "左",
+      "font_class": "zuo",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "19601689",
+      "name": "左",
+      "font_class": "zuo-copy",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "8780712",
+      "name": "下",
+      "font_class": "down",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12960624",
+      "name": "目录",
+      "font_class": "mulu",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "18887816",
+      "name": "雪花-02",
+      "font_class": "shengdantubiao-22",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    }
+  ]
+}
