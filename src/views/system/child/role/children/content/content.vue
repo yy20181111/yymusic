@@ -9,14 +9,12 @@
           </el-option>
         </el-select>
       </div>
-
       <div>
         <el-button type="primary" size="small" @click="$refs.Dialog.dialogVisible = true">新增1</el-button >
         <el-button type="primary" size="small" @click="$refs.Write.dialogVisible = true">新增2</el-button >
         <el-button  type="primary" size="small" @click="$refs.New.dialogVisible = true">新增3</el-button >
       </div>
     </div>
-
     <div class="contentt">
       <el-table :data="tableData" style="width: 100% align:center header-align=center" >
         <el-table-column prop="icon" label="名称" width="300">
@@ -100,7 +98,7 @@ export default {
 <style lang="less" scoped>
 .container {
   overflow: hidden;
-  height: 800px;
+  height:800px;
   margin: 0 15px;
   background-color: #fff;
   .df {
@@ -113,6 +111,7 @@ export default {
     height: 70px;
     .text {
       margin-left: 10px;
+      line-height: 30px;
     }
     .select {
       margin: 0 20px;

@@ -23,7 +23,8 @@ export default {
 <style lang="less" scoped>
 .authority {
   display: flex;
-  height: 500px;
+  height:100%;
+  background-color:  #f7f7f7;
   .nav-l {
     width: 235px;
     height: 381px;
@@ -33,7 +34,7 @@ export default {
     .content{
       overflow: hidden;
       background-color:#F7F7F7;
-      height: 500px;
+      height: 100%;
       margin-top: 15px;
     }
   }

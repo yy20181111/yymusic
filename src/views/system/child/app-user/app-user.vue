@@ -3,7 +3,6 @@
     <div class="nav">
      <NavBar></NavBar>
       <div class="content">
-    
         <Content></Content>
       </div>
     </div>
@@ -25,7 +24,8 @@ export default {
 <style lang="less" scoped>
 .authority {
   display: flex;
-  height: 500px;
+  height:100%;
+
   .nav-l {
     width: 235px;
     height: 381px;
@@ -35,7 +35,7 @@ export default {
     .content{
       overflow: hidden;
       background-color:#F7F7F7;
-      height: 500px;
+      height:100%;
       margin-top: 15px;
     }
   }

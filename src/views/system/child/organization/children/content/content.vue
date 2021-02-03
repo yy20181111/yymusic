@@ -177,7 +177,7 @@ export default {
 <style lang="less" scoped>
 .container {
   overflow: hidden;
-  height: 800px;
+  height: 840px;
   margin: 0 15px;
   background-color: #fff;
   .contentt {

@@ -12,7 +12,7 @@
     </div>
 
     <div class="hr">
-      <div class="user">管理员</div>
+      <div class="user" @click='getUser'>管理员</div>
       <div class="user-name">LUXISZR</div>
       <div class="hr-icon iconfont">&#xe600;</div>
     </div>
@@ -22,14 +22,25 @@
 
 <script>
 import { navList } from "@/utils/local-data";
+import { getUserInfo } from "@/api/request/user";
+
+
+
 export default {
   data() {
     return {
       headerNavItem: navList,
+      userId:"12",
     };
   },
+  mounted (){
+    this.getUser()
+  },
   methods:{
-    
+     async getUser() {
+      let res = await getUserInfo(51);
+      console.log(res)
+    },
   }
  
 };

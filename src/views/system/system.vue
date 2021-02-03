@@ -1,14 +1,15 @@
 <template>
-  <div class="authority">
-    <div class="nav-l">
-      <SliderItem></SliderItem>
-    </div>
-    <div class="nav">
-      <div class="content">
-        <router-view></router-view>
+
+    <div class="authority">
+      <div class="nav-l">
+        <SliderItem></SliderItem>
+      </div>
+      <div class="nav">
+        <div class="content">
+          <router-view></router-view>
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -30,10 +31,13 @@ export default {
   }
   .nav {
     flex: 1 1 auto;
+    height: 100%;
+    // background-color: pink;
     .content {
+      height: 850px;
       overflow: hidden;
       background-color: #f7f7f7;
-      height: 100%;
+      // height: 100%;
     }
   }
 }

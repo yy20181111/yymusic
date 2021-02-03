@@ -3,7 +3,7 @@
     <div class="nav">
       <NavBar></NavBar>
       <div class="content">
-        <App></App>
+      
         <Content></Content>
       </div>
     </div>
