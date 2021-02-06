@@ -13,7 +13,7 @@
 
     <div class="hr">
       <div class="user" @click='getUser'>管理员</div>
-      <div class="user-name">LUXISZR</div>
+      <div class="user-name">{{username}}</div>
       <div class="hr-icon iconfont">&#xe600;</div>
     </div>
     
@@ -21,25 +21,25 @@
 </template>
 
 <script>
-import { navList } from "@/utils/local-data";
 import { getUserInfo } from "@/api/request/user";
-
-
-
+import { getId } from '@/utils/cookie/index'
+import { navList } from "@/utils/local-data";
 export default {
   data() {
     return {
       headerNavItem: navList,
-      userId:"12",
+      username: '',
+      id: getId()
     };
   },
   mounted (){
     this.getUser()
   },
   methods:{
+    //获取用户信息
      async getUser() {
-      let res = await getUserInfo(51);
-      console.log(res)
+      let res = await getUserInfo(this.id);
+      this.username = res.data.data.userName
     },
   }
  
@@ -115,7 +115,7 @@ export default {
     }
   }
   .hr {
-    width: 140px;
+    width: 166px;
     height: 80px;
     display: flex;
     align-items: center;

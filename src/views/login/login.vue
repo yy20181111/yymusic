@@ -26,7 +26,8 @@
 </template>
 
 <script>
-import { handleLogin } from "@/api/request/user";
+import { handlelogin } from "@/api/request/user";
+
 import { setToken, setId } from "@/utils/cookie";
 
 export default {
@@ -41,19 +42,20 @@ export default {
   },
   methods: {
     gologin() {
-      this.$router.replace("/register");
+      this.$router.push("/register");
     },
+    
     async gohome() {
-      let res = await handleLogin(this.form);
-      if (res.status == 200) {
-        setToken(res.data.data.token);
-        setId(res.data.data.userId);
-        this.$router.push("/home");
-        console.log("登陆成功");
-      } else {
-        console.log("失败");
-        // ....
-      }
+     let res = await handlelogin(this.form)
+     if(res.status === 200) {
+       //保存token
+       setToken(res.data.data.token)
+       //保存id
+       setId(res.data.data.userId)
+       this.$router.push('/home')
+     }else{
+       console('登录失败')
+     }
     },
   },
 };

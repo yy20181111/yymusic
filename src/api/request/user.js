@@ -1,22 +1,24 @@
 import service from '../index'
 
-// 登录
-export function handleLogin (data) {
-  return service({
-    url: '/system/user/login',
-    method: 'post',
+
+// 注册
+export function handleRegister(data){
+  return service ({
+    url:'/system/register',
+    method:'post',
     data
   })
 }
 
-// 注册
-export function handleRegister (data) {
+// 登录
+export function handlelogin (data){
   return service({
-    url: '/system/register',
-    method: 'post',
+    url:'/system/user/login',
+    method:'post',
     data
   })
 }
+
 
 // 个人信息
 export function getUserInfo (id) {
@@ -26,20 +28,11 @@ export function getUserInfo (id) {
   })
 }
 
-// export function getUserInfo (cid) {
-//   return service({
-//     url: '/system/searchUser',
-//     method: 'get',
-//     params: {
-//       cid
-//     }
-//   })
-// }
-
-// export function getUserInfo (cid) {
-//   return service({
-//     url: '/system/searchUser?cid=' + cid,
-//     method: 'get',
-
-//   })
-// }
+//获取所有用户信息
+export function getAllUser (data) {
+  return service({
+    url: '/system/user',
+    method: 'get',
+    data
+  })
+}

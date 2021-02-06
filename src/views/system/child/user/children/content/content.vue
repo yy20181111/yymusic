@@ -55,6 +55,8 @@
 import DialogNew from "../dialog/new";
 import DialogWrite from "../dialog/write";
 import Initialize from "../dialog/initialize";
+import { getAllUser } from "@/api/request/user";
+
 export default {
   data() {
     return {
@@ -78,24 +80,29 @@ export default {
           token: "2055-4-4",
           time: "2019-10-30",
         },
-        {
-          icon: "张通天",
-          name: "lx",
-          num: "885642",
-          address: "ffg23@qq.com",
-          login: "使用中",
-          token: "2011-4-4",
-          time: "2019-10-30",
-        },
+       
       ],
     };
   },
+  mounted(){
+    this.getUserinfo()
+  
+  },
+  methods:{
+    //获取所有用户信息
+     async getUserinfo() {
+      let res = await getAllUser();
+      console.log(res.data)
+     },
+    
+  },
+ 
   components: {
     DialogNew,
     DialogWrite,
     Initialize,
   },
-};
+}
 </script>
 
 <style lang="less" scoped>

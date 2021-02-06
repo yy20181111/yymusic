@@ -36,13 +36,15 @@
         <el-button type="primary" @click="submitForm('form')">注册</el-button>
         <el-button @click="resetForm('form')">重置</el-button>
       </el-form-item>
-      <div class="goLogin" @click="$router.push('/login')">已有账号点击登录</div>
+      <div class="goLogin" @click="$router.push('/login')">
+        已有账号点击登录
+      </div>
     </el-form>
   </div>
 </template>
 
 <script>
-import { handleRegister } from '@/api/request/user'
+import { handleRegister } from "@/api/request/user";
 export default {
   data() {
     var validatePass = (rule, value, callback) => {
@@ -72,35 +74,32 @@ export default {
         password: "",
         phone: "",
         userName: "",
-        checkpassword: "",
+        checkpassword: ""
       },
       rulesForm: {
         password: [{ validator: validatePass, trigger: "blur" }],
-        checkpassword: [{ validator: validatePass2, trigger: "blur" }],
-      },
+        checkpassword: [{ validator: validatePass2, trigger: "blur" }]
+      }
     };
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate( async (valid) => {
+      this.$refs[formName].validate(async valid => {
         if (valid) {
-          let res = await handleRegister(this.form)
-          console.log(res)
-          if( res.status == 200){
-            return this.$router.push('/login')
+          let res = await handleRegister(this.form);
+          if (res.status === 200) {
+            this.$router.push("/login");
           }
-          return 
-          
         } else {
-          console.log("error submit!!");
+          console.log("失败");
           return false;
         }
       });
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -118,7 +117,7 @@ export default {
   opacity: 0.7;
 
   // background-color: rgba(255,0,0,0.3);
-  .goLogin{
+  .goLogin {
     width: 130px;
     height: 20px;
     line-height: 20px;
@@ -128,7 +127,7 @@ export default {
     font-weight: 900;
     cursor: pointer;
     letter-spacing: 1px;
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }

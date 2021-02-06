@@ -1,7 +1,6 @@
 import axios from 'axios'
-
-import { getToken } from '@/utils/cookie'
-
+import {getToken} from '../utils/cookie/index'
+import router from '../router/index'
 // 创建实例
 const service = axios.create({
   baseURL: 'api',
@@ -13,6 +12,7 @@ service.interceptors.request.use(
   config => {
     if (getToken()) {
       config.headers['token'] = getToken()
+      
     }
     return config
   }, err => {
@@ -26,7 +26,8 @@ service.interceptors.request.use(
 service.interceptors.response.use(res => {
   return res
 }, err => {
-  console.log(err);
+  console.log(err)
+  router.push('/login')
 })
 
 export default service
