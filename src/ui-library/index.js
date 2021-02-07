@@ -1,31 +1,18 @@
 import {
-  NavMenu,
-  Select,
-  Table,
-  Pagination,
-  Dialog,
-  Button,
-  Input,
-  Upload,
-  MessageBox,
-  DatePicker
+   Carousel,
+   CarouselItem,
+   Slider,
+   CollapseTransition,
+   Button
 } from 'element-ui'
 const element = {
- install: function (Vue) {
-   Vue.use(NavMenu)
-   Vue.use(Select)
-   Vue.use(Table)
-   Vue.use(Pagination)
-   Vue.use(Dialog)
-   Vue.use(Button)
-   Vue.use(Input)
-   Vue.use(Upload)
-   Vue.use(MessageBox)
-   Vue.use(DatePicker)
-   
- 
-
- }
+  install: function (Vue) {
+    Vue.use(Carousel)
+    Vue.use(CarouselItem)
+    Vue.use(Slider)
+    Vue.use(Button)
+    Vue.use(CollapseTransition)
+  }
 }
 
 export default element

@@ -1,63 +1,66 @@
-export const navList = [
+export const navList =  [
   {
-    name: '系统总览',
-    path: '/home/overview',
+    name: '发现音乐',
+    path: '/discover',
   },
   {
-    name: '数据查询',
-    path: '/home/search',
+    name: '我的音乐',
+    path: '/mymusic',
   },
   {
-    name: '数据维护',
-    path: '/home/safeguard',
+    name: '朋友',
+    path: '/friend',
   },
   {
-    name: '统计报表',
-    path: '/home/table',
+    name: '商城',
+    path: '/shop',
   },
   {
-    name: '视频监测',
-    path: '/home/video',
+    name: '音乐人',
+    path: '/singer',
   },
   {
-    name: '预警管理',
-    path: '/home/warn',
-  }, {
-    name: '基础信息',
-    path: '/home/basicinfor',
-  }, {
-    name: '系统管理',
-    path: '/home/system',
-  },
-]
-export const sideList = [
-  {
-    name: '用户管理',
-    path: '/home/system/user',
-  },
-  {
-    name: '组织管理',
-    path: '/home/system/organization',
-  },
-  {
-    name: '应用程序管理',
-    path: '/home/system/application',
-  }, {
-    name: '应用程序用户管理',
-    path: '/home/system/app-user',
-  }, {
-    name: '权限管理',
-    path: '/home/system/authority'
-  }, {
-    name: '角色管理',
-    path: '/home/system/role',
+    name: '下载客户端',
+    path: '/download',
   },
 ]
 
-export const register = [
-{
-  name:'',
-  path:'/login/login'
-}
-
+export const discoverNav = [
+  {
+    name: '推荐',
+    path: '/recommend',
+  },
+  {
+    name: '排行榜',
+    path: '/rank',
+  },
+  {
+    name: '歌单',
+    path:'/songlist'
+  },
+  {
+    name: '主播电台',
+    path:'/anchor'
+  },
+  {
+    name: '歌手',
+    path:'/singerr'
+  },
+  {
+    name: '新碟上架',
+    path:'/newdisc'
+  },
+]
+export const recommendlist = [
+  {name:'华语',
+  // path:
+}, {name:'流行',
+// path:
+}, {name:'摇滚',
+// path:
+}, {name:'民谣',
+// path:
+}, {name:'电子',
+// path:
+},
 ]

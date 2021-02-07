@@ -52,14 +52,14 @@ table {
 
 /* custom */
 a {
-  color: #333;
+  color: #7e8c8d;
   text-decoration: none;
   -webkit-backface-visibility: hidden;
   box-sizing: border-box;
 }
 
 a:hover{
-  text-decoration: none;
+  text-decoration: underline;
 }
 li {
   list-style: none;

@@ -1,4 +1,4 @@
-# water-system
+# yymusic
 
 ## Project setup
 ```

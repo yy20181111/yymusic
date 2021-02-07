@@ -1,30 +1,32 @@
 <template>
   <div id="app">
-  <!-- <Header></Header> -->
+    <YYheader></YYheader>
+   
     <router-view></router-view>
+    <YYfooter></YYfooter>
+    <YYplay></YYplay>
   </div>
 </template>
 
 <script>
-// import Header from './components/header/header.vue'
+import YYheader from './components/header/yy-header'
+import YYfooter from './components/footer/yy-footer'
+import YYplay from './components/play/yy-play'
 
 export default {
   name: 'App',
-  components: {
-  //  Header
-  },
-  mounted (){
-    // 文字不允许被选中
-    document.onselectstart = function(event){
-    event.returnValue = false;
-    }
-  }
+  
+components:{
+  YYheader,YYfooter,YYplay
+
+}
 }
 </script>
 
 <style>
-.app{
-  height: 100%;
+#app {
   width: 100%;
+  background: #F5F5F5;
 }
+
 </style>
